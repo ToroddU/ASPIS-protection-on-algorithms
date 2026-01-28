@@ -1,5 +1,4 @@
 #include "quicksort.h"
-#include "fi.h"
 #include <stdio.h>
 
 // Function to swap two elements
@@ -12,7 +11,6 @@ static void swap(int *a, int *b) {
 // Partition function 
 static int partition(int *arr, int low, int high) {
     // Inject fault directly into array element (ASPIS can detect this)
-    fi_maybe_flip(&arr[high]);
     int pivot = arr[high];  // Last element is pivot
     int i = low - 1;  
     

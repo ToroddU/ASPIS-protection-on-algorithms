@@ -1,5 +1,4 @@
 #include "minimax.h"
-#include "fi.h"
 #include <stdio.h>
 #include <limits.h>
 
@@ -24,7 +23,7 @@ static int minimax(Node *leaves, int nodeIndex, int depth, int isMaximizing) {
     // Base case: reached leaf node
     if (depth == 4) {
         // Inject fault directly into leaf node value (ASPIS can detect this)
-        fi_maybe_flip(&leaves[nodeIndex].value);
+        
         int leafValue = leaves[nodeIndex].value;
         return leafValue;
     }

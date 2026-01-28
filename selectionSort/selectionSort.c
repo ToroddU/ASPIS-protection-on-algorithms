@@ -1,5 +1,4 @@
 #include "selectionSort.h"
-#include "fi.h"
 #include <stdio.h>
 
 // Function to swap two elements
@@ -15,7 +14,6 @@ static void selectionSort(int *arr, size_t size) {
         // Find the minimum element in the remaining unsorted portion
         size_t minIdx = i;
         // Inject fault directly into array element (ASPIS can detect this)
-        fi_maybe_flip(&arr[i]);
         int minVal = arr[i];  
         
         for (size_t j = i + 1; j < size; j++) {
