@@ -17,12 +17,11 @@ static void generateLeaves(Node *leaves, int *arr) {
 }
 
 // Minimax algorithm with alternating max/min
-// depth: 0=root (MAX), 1(MIN), 2(MAX), 3(MIN), 4=leaves
-// isMaximizing: 1 for MAX node, 0 for MIN node
+
 static int minimax(Node *leaves, int nodeIndex, int depth, int isMaximizing) {
-    // Base case: reached leaf node
+    // Base case: leaf node
     if (depth == 4) {
-        // Inject fault directly into leaf node value (ASPIS can detect this)
+
         
         int leafValue = leaves[nodeIndex].value;
         return leafValue;

@@ -1,7 +1,8 @@
 #include "selectionSort.h"
 #include <stdio.h>
 
-// Function to swap two elements
+
+
 static void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
@@ -11,9 +12,7 @@ static void swap(int *a, int *b) {
 // Selection sort function
 static void selectionSort(int *arr, size_t size) {
     for (size_t i = 0; i < size - 1; i++) {
-        // Find the minimum element in the remaining unsorted portion
         size_t minIdx = i;
-        // Inject fault directly into array element (ASPIS can detect this)
         int minVal = arr[i];  
         
         for (size_t j = i + 1; j < size; j++) {
@@ -61,6 +60,6 @@ void runSelectionSort(int *arr, size_t size) {
     }
     printf("\n");
     
-    // Verify the array is sorted
+    
     checkIfSorted(arr, size);
 }

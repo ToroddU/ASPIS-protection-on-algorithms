@@ -1,17 +1,19 @@
 #include "quicksort.h"
 #include <stdio.h>
 
-// Function to swap two elements
+
+
+
 static void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-// Partition function 
+
+
 static int partition(int *arr, int low, int high) {
-    // Inject fault directly into array element (ASPIS can detect this)
-    int pivot = arr[high];  // Last element is pivot
+    int pivot = arr[high];  
     int i = low - 1;  
     
     for (int j = low; j < high; j++) {
@@ -64,6 +66,5 @@ void runQuicksort(int *arr, size_t size) {
     }
     printf("\n");
     
-    // Verify the array is sorted
     checkIfSorted(arr, size);
 }
